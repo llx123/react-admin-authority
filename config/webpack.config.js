@@ -461,7 +461,7 @@ module.exports = function(webpackEnv) {
               test: lessRegex,
               exclude: lessModuleRegex,
               use: [
-                ...getStyleLoaders({ importLoaders: 2 }, 'less-loader'),
+                ...getStyleLoaders({ importLoaders: 2, modules: true }, 'less-loader'),
                 // {
                 // 	loader: require.resolve('less-loader'),
                 // 		options: {
