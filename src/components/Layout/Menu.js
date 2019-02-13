@@ -2,7 +2,7 @@ import React from 'react';
 import { Menu, Icon } from 'antd';
 import { Link } from 'react-router-dom';
 
-const renderMenuItem = item => ( // item.route 菜单单独跳转的路由
+const renderMenuItem = item => ( // 不带子菜单
   <Menu.Item
     key={item.path}
   >
@@ -13,7 +13,7 @@ const renderMenuItem = item => ( // item.route 菜单单独跳转的路由
   </Menu.Item>
 );
 
-const renderSider = item => (
+const renderSider = item => ( // 带子菜单
   <Menu.SubMenu
     key={item.path}
     title={
