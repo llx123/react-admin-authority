@@ -122,5 +122,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "js-cookie": "^2.2.0",
+    "mock": "^0.1.1"
   }
 }
