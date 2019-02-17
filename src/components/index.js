@@ -1,7 +1,8 @@
-import Dashboard from './Dashboard';
-import SiderMenu from './Layout/Sider';
+import SiderMenu from './Layout/Sider'
+import Header from './Layout/Header'
+import Bread from './Layout/Bread'
 
 
 export default {
-  Dashboard, SiderMenu
+  SiderMenu, Header, Bread
 }
