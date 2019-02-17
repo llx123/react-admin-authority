@@ -13,7 +13,7 @@ const renderMenuItem = item => ( // 不带子菜单
   </Menu.Item>
 );
 
-const renderSider = item => ( // 带子菜单
+const renderSider = (item, token) => ( // 带子菜单
   <Menu.SubMenu
     key={item.path}
     title={
@@ -23,14 +23,14 @@ const renderSider = item => ( // 带子菜单
       </span>
     }
   >
-    {item.children.map(item => renderMenuItem(item))}
+    {item.children.map(item => item.roles.some(_=>_===token) ? renderMenuItem(item) : false)}
   </Menu.SubMenu>
 );
 
-export default ({ menus, ...props }) => (
+export default ({ menus, token, ...props }) => (
   <Menu {...props}>
     {menus && menus.map(item =>
-      item.children ? renderSider(item) : renderMenuItem(item)
+      item.roles.some(_=>_===token) ? item.children ? renderSider(item, token): renderMenuItem(item) : false
     )}
   </Menu>
 );

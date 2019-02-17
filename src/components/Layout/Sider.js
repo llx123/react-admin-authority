@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Layout } from 'antd'
 import { withRouter } from 'react-router-dom'
 import routes from '../../routes/config'
+import { getToken } from '../../utils/auth'
 import SiderMenu from './Menu'
 import styles from './index.less'
 
@@ -57,6 +58,7 @@ class MySider extends Component {
         <SiderMenu
           menus={routes.menus}
           mode="inline"
+          token={getToken()}
           selectedKeys={[selectedKey]}
           openKeys={[openKey]}
           onOpenChange={this.openMenu}
