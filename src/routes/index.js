@@ -32,7 +32,7 @@ export default class MyRouter extends Component {
                       props.match.params = { ...params };
                       const merge = { ...props, query: queryParams ? queryString.parse(queryParams[0]) : {} };
                       // 回传route配置
-                      return getToken() ? <Component {...merge} /> : <Redirect to={'/login'} />                      
+                      return getToken() ? r.roles.some(_=>_===getToken())?<Component {...merge} />: <Redirect to={'/404'} /> : <Redirect to={'/login'} />                      
                     }}
                   />
                 )
