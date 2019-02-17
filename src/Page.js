@@ -38,20 +38,20 @@ class App extends Component {
     return (
       <DocumentTitle title="react-admin">
         <Layout style={{ height: '100%' }} >
-          <SiderMenu collapsed={collapsed} myLocation={this.props.location}/>
+          <SiderMenu collapsed={collapsed} myLocation={this.props.location} />
           <Layout>
             <Head iconType={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-              logout={()=>{
-                this.props.doLogout().then(()=>{
+              logout={() => {
+                this.props.doLogout().then(() => {
                   window.location.reload()
                 })
               }}
-              changeSlider={this.toggle}/>
+              changeSlider={this.toggle} />
             <Content style={{ padding: '20px', minHeight: 'initial' }}>
               <Bread menu={config.menus}
                 location={this.props.location}
-                />
-              <Routes/>
+              />
+              <Routes />
             </Content>
             <Footer style={{ textAlign: 'center' }}>
               React-Admin ©{new Date().getFullYear()} Created by llx123
