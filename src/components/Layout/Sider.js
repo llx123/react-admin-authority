@@ -54,7 +54,7 @@ class MySider extends Component {
         collapsed={collapsed}
         theme="light"
       >
-        <div className={styles.logo} />
+        <div className={styles.logo}>React-Admin</div>
         <SiderMenu
           menus={routes.menus}
           mode="inline"

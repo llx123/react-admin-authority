@@ -31,7 +31,7 @@ const Header = ({
             }}
             title={<span>
               <Icon type="user" />
-              {111}
+              {'UserName'}
             </span>}
           >
             <Menu.Item key="logout">

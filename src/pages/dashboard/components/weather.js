@@ -16,11 +16,11 @@ function Weather ({
               backgroundRepeat: 'no-repeat'
             }}
           />
-          <p>{'春天来了'}</p>
+          <p>{'晴转多云'}</p>
         </div>
         <div className={styles.right}>
           <h1 className={styles.temperature}>{`${22}°`}</h1>
-          <p className={styles.description}>{'南京'},{'03-01'}</p>
+          <p className={styles.description}>{'南京'}</p>
         </div>
       </div>
     </Spin>)
