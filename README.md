@@ -25,3 +25,8 @@ yarn start or npm start
 ```js
 yarn build or npm run build
 ```
+
+### Dashboard
+<p align="center">
+  <img width="900" src="./public/images/dashboard.jpg">
+</p>
