@@ -52,7 +52,6 @@ class Login extends PureComponent {
         <div className={styles.form}>
           <div className={styles.logo}>
             LOGO{JSON.stringify(this.props.user)}
-            <div onClick={() => { this.props.getInfo('ll') }}>111</div>
           </div>
           <form>
             <FormItem hasFeedback>
